@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Your Details</title>
+</head>
+<body>
+    <h1>Submit Your Details</h1>
+    <form id="userForm">
+        Email: <input type="email" id="email" required><br><br>
+        Location: <input type="text" id="location" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const location = document.getElementById('location').value;
+            window.location.href = `submitted.html?email=${email}&location=${location}`;
+        });
+    </script>
+</body>
+</html>
