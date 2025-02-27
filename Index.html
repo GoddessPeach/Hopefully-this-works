@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Goddess EDA - Welcome</title>
+</head>
+<body>
+    <h1>There is No Turning Back.</h1>
+    <p>By proceeding, you consent to data collection and agree to the terms below.</p>
+    <input type="checkbox" id="agreeBox"> I agree to the terms
+    <br><br>
+    <button id="enterBtn" onclick="window.location.href='form.html'" disabled>Enter</button>
+
+    <script>
+        document.getElementById('agreeBox').addEventListener('change', function() {
+            document.getElementById('enterBtn').disabled = !this.checked;
+        });
+    </script>
+</body>
+</html>
