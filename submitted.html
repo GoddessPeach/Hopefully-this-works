@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submission Complete</title>
+</head>
+<body>
+    <h1>Your Submission is Complete</h1>
+    <p>Your details have been received.</p>
+    <p id="emailDisplay"></p>
+    <p><a id="mapsLink" href="#" target="_blank">View Your Location</a></p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const email = params.get('email');
+        const location = params.get('location');
+
+        document.getElementById('emailDisplay').innerText = `Email: ${email}`;
+        document.getElementById('mapsLink').href = `https://www.google.com/maps?q=${location}`;
+        document.getElementById('mapsLink').innerText = "View Your Location";
+    </script>
+</body>
+</html>
